@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProjLicenseGenerator - نظام إدارة التراخيص الاحترافي</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #fff, #ffd89b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            color: #ffd89b;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 25px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        .feature-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .download-section {
+            text-align: center;
+            margin: 50px 0;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            margin: 10px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: #4CAF50;
+            color: white;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: #45a049;
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+        }
+
+        .btn-secondary {
+            background: #2196F3;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #0b7dda;
+            transform: scale(1.05);
+        }
+
+        .code-block {
+            background: #1e1e1e;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #d4d4d4;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .info-item {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .info-label {
+            font-weight: bold;
+            color: #ffd89b;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            .feature-card {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 ProjLicenseGenerator</h1>
+        <div class="subtitle">نظام متكامل لإدارة وإنشاء تراخيص البرامج الاحترافية</div>
+
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <div class="feature-title">إنشاء سريع للتراخيص</div>
+                <div>قم بإنشاء تراخيص مشفرة بشكل فوري مع صلاحيات مخصصة وميزات محددة.</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <div class="feature-title">تشفير متقدم</div>
+                <div>تراخيص مشفرة باستخدام خوارزميات قوية تمنع التزوير والنسخ غير القانوني.</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <div class="feature-title">إدارة الميزات</div>
+                <div>تحكم كامل بالميزات المفعلة (تقارير، تصدير، نسخ احتياطي، وغيرها).</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">👥</div>
+                <div class="feature-title">إدارة المستخدمين</div>
+                <div>تحديد الحد الأقصى للمستخدمين المسموح لهم باستخدام الترخيص.</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📅</div>
+                <div class="feature-title">صلاحية زمنية</div>
+                <div>تحديد تاريخ انتهاء الترخيص (يومي، شهري، سنوي، أو غير محدود).</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💾</div>
+                <div class="feature-title">حفظ تلقائي</div>
+                <div>حفظ التراخيص في مجلد المستندات مع إمكانية فتح المجلد بنقرة زر.</div>
+            </div>
+        </div>
+
+        <div class="download-section">
+            <h2>📥 تحميل المشروع</h2>
+            <p>اختر طريقة التحميل المناسبة لك:</p>
+            <a href="#" class="btn btn-primary" onclick="showDownloadAlert()">📦 تحميل الإصدار 1.0 (Windows)</a>
+            <a href="#" class="btn btn-secondary" onclick="showSourceAlert()">💾 تحميل الكود المصدري (Delphi)</a>
+        </div>
+
+        <div class="info-grid">
+            <div class="info-item">
+                <div class="info-label">الإصدار الحالي</div>
+                <div>1.0.0 (Stable)</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">آخر تحديث</div>
+                <div>8 يونيو 2026</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">المنصة</div>
+                <div>Windows 7/8/10/11</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">لغة التطوير</div>
+                <div>Delphi (Object Pascal)</div>
+            </div>
+        </div>
+
+        <div class="code-block">
+            <strong>📝 مثال لاستخدام التطبيق:</strong><br><br>
+            // إنشاء ترخيص جديد<br>
+            var LicenseKey := CreateLicense(<br>
+            &nbsp;&nbsp;'شركة التقنية',<br>
+            &nbsp;&nbsp;'PRO-AI-2026',<br>
+            &nbsp;&nbsp;'ENTERPRISE',<br>
+            &nbsp;&nbsp;IncYear(Now, 2),<br>
+            &nbsp;&nbsp;50,<br>
+            &nbsp;&nbsp;['AI', 'REPORTING', 'CLOUD']<br>
+            );<br><br>
+            // النتيجة: ✅ تم إنشاء الترخيص وحفظه في مجلد المستندات
+        </div>
+
+        <div style="background: #4CAF50; border-radius: 10px; padding: 20px; margin: 20px 0;">
+            <h3 style="text-align: center;">✨ مميزات إضافية في الإصدار الجديد ✨</h3>
+            <ul style="list-style: none; padding-right: 20px;">
+                <li>✓ ✔ تحسين أمان المسارات وحل مشكلة صلاحيات الكتابة على C:\</li>
+                <li>✓ إضافة خاصية فتح مجلد التراخيص تلقائياً بعد الإنشاء</li>
+                <li>✓ واجهة مستخدم محسنة مع دعم كامل للغة العربية</li>
+                <li>✓ دعم قواعد بيانات متعددة (Firebird، SQLite، MySQL)</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>© 2026 ProjLicenseGenerator - جميع الحقوق محفوظة</p>
+            <p>تم التطوير بواسطة [اسمك] | للتواصل: [بريدك الإلكتروني]</p>
+            <p>
+                <a href="#" style="color: #ffd89b;" onclick="showContact()">📧 اتصل بنا</a> | 
+                <a href="#" style="color: #ffd89b;" onclick="showDocs()">📖 التوثيق</a>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        function showDownloadAlert() {
+            alert("🔧 رابط التحميل سيتم تفعيله قريباً!\n\nحالياً يمكنك:\n1. تحميل الملف من Google Drive (أرسل رابط التحميل للمستخدمين)\n2. أو طلب النسخة عبر البريد الإلكتروني");
+        }
+        
+        function showSourceAlert() {
+            alert("📂 يمكنك الحصول على الكود المصدري الكامل عبر:\n- GitHub (يفضل للمطورين)\n- أو إرسال طلب إلى البريد الإلكتروني");
+        }
+        
+        function showContact() {
+            alert("📧 للتواصل مع المطور:\nالبريد الإلكتروني: your-email@example.com\nواتساب: +963XXXXXXXXX");
+        }
+        
+        function showDocs() {
+            alert("📖 التوثيق قيد الإعداد حالياً.\nسيتم توفير دليل المستخدم الكامل وشرح واجهة البرمجة قريباً.");
+        }
+        
+        // تأثير حركي عند تمرير الماوس على البطاقات
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.addEventListener('click', () => {
+                card.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    card.style.transform = '';
+                }, 200);
+            });
+        });
+    </script>
+</body>
+</html>
