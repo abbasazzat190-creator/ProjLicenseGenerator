@@ -1,0 +1,122 @@
+markdown
+# 🔐 ProjLicenseGenerator
+
+<div align="center">
+
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![Delphi](https://img.shields.io/badge/Delphi-11.3-red)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Platform](https://img.shields.io/badge/platform-Windows-lightgrey)
+
+**نظام متكامل لإدارة وإنشاء تراخيص البرامج الاحترافية**
+
+[![GitHub Pages](https://img.shields.io/badge/Website-Live-brightgreen)](https://abbasazzat190-creator.github.io/ProjLicenseGenerator/)
+[![Download](https://img.shields.io/badge/Download-EXE-orange)](https://github.com/abbasazzat190-creator/ProjLicenseGenerator/raw/main/progF1.1.1.rar)
+
+</div>
+
+---
+
+## 📖 عن المشروع
+
+**ProjLicenseGenerator** هو نظام احترافي تم تطويره باستخدام **Delphi** (Object Pascal) لإدارة وإنشاء تراخيص البرامج بشكل آمن وسريع. يسمح النظام للمطورين بإنشاء مفاتيح ترخيص مشفرة مع صلاحيات مخصصة وميزات محددة.
+
+---
+
+## ✨ المميزات الرئيسية
+
+| الميزة | الوصف |
+|--------|-------|
+| ⚡ **إنشاء سريع للتراخيص** | إنشاء تراخيص مشفرة بشكل فوري |
+| 🔒 **تشفير متقدم** | حماية التراخيص من التزوير والنسخ غير القانوني |
+| 📊 **إدارة الميزات** | تحكم كامل بالميزات المفعلة (تقارير، تصدير، نسخ احتياطي) |
+| 👥 **إدارة المستخدمين** | تحديد الحد الأقصى للمستخدمين المسموح لهم |
+| 📅 **صلاحية زمنية** | تحديد تاريخ انتهاء الترخيص (يومي، شهري، سنوي) |
+| 💾 **حفظ تلقائي** | حفظ التراخيص في مجلد المستندات مع فتح المجلد بنقرة |
+
+---
+
+## 🖼️ صور من البرنامج
+
+<div align="center">
+
+![Main Screen](https://via.placeholder.com/800x400?text=ProjLicenseGenerator+Main+Screen)
+
+*واجهة البرنامج الرئيسية*
+
+</div>
+
+---
+
+## 📥 التحميل والتنصيب
+
+### متطلبات التشغيل:
+- نظام التشغيل: Windows 7/8/10/11
+- مساحة تخزين: 50 ميجابايت
+
+### خطوات التحميل:
+
+1. **تحميل البرنامج**
+   
+   [![Download](https://img.shields.io/badge/📦_Download_progF1.1.1.rar-blue)](https://github.com/abbasazzat190-creator/ProjLicenseGenerator/raw/main/progF1.1.1.rar)
+
+2. **فك الضغط**
+   - استخدم برنامج WinRAR أو 7-Zip لفك ضغط ملف `.rar`
+
+3. **تشغيل البرنامج**
+   - انقر مرتين على ملف `.exe`
+
+---
+
+## 🛠️ التقنيات المستخدمة
+
+| التقنية | الغرض |
+|----------|--------|
+| **Delphi 11.3** | لغة التطوير الأساسية |
+| **Object Pascal** | لغة البرمجة |
+| **Firebird / SQLite** | قاعدة البيانات |
+| **GitHub Pages** | استضافة صفحة المشروع |
+
+---
+
+## 📂 هيكل المشروع
+ProjLicenseGenerator/
+├── index.html # صفحة المشروع على الويب
+├── progF1.1.1.rar # ملف البرنامج المضغوط
+├── موز3.png # صورة المشروع
+├── Source/
+│ ├── AdminFormUnit.pas
+│ ├── DeveloperApprovalUnit.pas
+│ ├── UnitA.pas
+│ └── UnitA.dfm
+└── Bin/
+└── ProjLicenseGenerator.exe
+text
+
+---
+
+## 🚀 كيفية الاستخدام
+
+### إنشاء ترخيص جديد:
+
+```pascal
+// مثال لإنشاء ترخيص
+var
+  LicenseKey: string;
+  Features: TStringArray;
+begin
+  SetLength(Features, 3);
+  Features[0] := 'REPORTING';
+  Features[1] := 'EXPORT';
+  Features[2] := 'BACKUP';
+  
+  LicenseKey := CreateAndSaveLicense(
+    'اسم العميل',
+    'PROJ-A-2024',
+    'FULL',
+    IncYear(Now, 1),
+    5,
+    Features,
+    'C:\Licenses\license.txt'
+  );
+end;
